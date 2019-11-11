@@ -24,4 +24,5 @@ public class PaypalController {
         }
         return new Receipt();
     }
+
 }
