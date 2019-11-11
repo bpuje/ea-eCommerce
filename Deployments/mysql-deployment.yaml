@@ -27,7 +27,7 @@ spec:
       containers:
         - image: mysql:5.6
           name: mysql
-          env:                        # Environment variables passed to the container
+          env:                        # Environment variables passed to the container //test
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:                # Read environment variables from kubernetes secrets
                 secretKeyRef:
