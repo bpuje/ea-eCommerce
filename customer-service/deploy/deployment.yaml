@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customer-service
+  labels:
+    app: customer-service
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: customer-service
+    spec:
+      containers:
+        - name: customer-service
+          image: puje2docker/customer-service:latest
+          ports:
+            - containerPort: 8080
+  selector:
+    matchLabels:
+      app: customer-service

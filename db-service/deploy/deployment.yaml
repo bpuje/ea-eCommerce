@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db-service
+  labels:
+    app: db-service
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: db-service
+    spec:
+      containers:
+        - name: db-service
+          image: puje2docker/db-service:latest
+          ports:
+            - containerPort: 8080
+  selector:
+    matchLabels:
+      app: db-service
