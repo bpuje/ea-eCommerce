@@ -1,7 +1,7 @@
 package edu.mum.cs544.ecommerce.dbservice.resource;
 
 import edu.mum.cs544.ecommerce.dbservice.model.Customer;
-import edu.mum.cs544.ecommerce.dbservice.repository.CustomerRepository;
+import edu.mum.cs544.ecommerce.dbservice.repository.CustomerServiceRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +13,7 @@ import java.util.List;
 public class CustomerResource {
 
     @Autowired
-    CustomerRepository customerRepository;
+    CustomerServiceRepo customerRepository;
 
     @PostMapping("/save")
     public void saveUser(@RequestBody Customer customer){

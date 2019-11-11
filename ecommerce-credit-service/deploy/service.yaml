@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Service
 metadata:
-  name: deployment-service
+  name: credit-service
   labels:
-    app: deployment-service
+    app: credit-service
 spec:
   type: ClusterIP
   ports:
@@ -11,4 +11,4 @@ spec:
       port: 8080
       targetPort: 8080
   selector:
-    app: deployment-service
+    app: credit-service

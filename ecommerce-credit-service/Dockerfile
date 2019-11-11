@@ -1,8 +1,8 @@
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
-ADD target/deployment-service-0.0.1-SNAPSHOT.jar deployment-service.jar
+ADD target/credit-service-0.0.1-SNAPSHOT.jar credit-service.jar
 EXPOSE 8080
-ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /deployment-service.jar" ]
+ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /credit-service.jar" ]
 
 
 #FROM openjdk:8
