@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.cs544.auth-service</groupId>
     <artifactId>auth-service</artifactId>
-    <version>0.1</version>
+    <version>0.0.1</version>
     <name>auth-service</name>
     <description>Jwt authentication service to authorize client interaction with the system</description>
 

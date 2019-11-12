@@ -29,7 +29,7 @@ clone the source code from GitHub link:
 #### Step 2
 Run following command:
 ```
-$ cd ea2/deployment
+$ cd Mini-Project-2/deployment
 ```
 #### Step 3
 Push all docker images for all microservices. It would 
@@ -130,5 +130,6 @@ Url:
   "password": "chinedu"
 }
 
-
-
+Students: EA-Mini-Project-2
+Purevdemberel Byambatogtokh 986799
+Chinedu Ugwu 

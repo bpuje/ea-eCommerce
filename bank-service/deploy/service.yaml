@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Service
 metadata:
-  name: customer-service
+  name: payment-service
   labels:
-    app: customer-service
+    app: payment-service
 spec:
   type: ClusterIP
   ports:
@@ -11,4 +11,4 @@ spec:
       port: 8080
       targetPort: 8080
   selector:
-    app: customer-service
+    app: payment-service
