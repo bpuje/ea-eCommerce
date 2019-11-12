@@ -27,7 +27,7 @@ public class AccountController {
     @Autowired
     private PaymentMethodServiceImpl methodService;
 
-    @PostMapping("/addaccount")
+    @PostMapping("/addAccount")
     public AuthModel addAccount(@RequestBody Account account) {
         AuthModel authModel = new AuthModel(account.getUsername(), account.getPassword());
         ResponseEntity<?> responseEntity = restTemplate.postForEntity("http://localhost:8080/api/auth/adduser", authModel, Object.class);

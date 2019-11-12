@@ -1,5 +1,5 @@
 DOCKERHUBREPO=puje
-IMAGE=${DOCKERHUBREPO}/db-service
+IMAGE=${DOCKERHUBREPO}/pays_pp_service
 
 # ===== Maven =====
 maven-rebuild:
@@ -10,7 +10,7 @@ docker-build: maven-rebuild
 	docker build -t ${IMAGE}:latest .
 
 docker-run:
-	docker run -p 8080:8086 ${IMAGE}
+	docker run -p 8080:8093 ${IMAGE}
 
 docker-login:
 	docker login

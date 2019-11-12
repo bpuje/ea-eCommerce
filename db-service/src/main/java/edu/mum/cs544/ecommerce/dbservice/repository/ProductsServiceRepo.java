@@ -2,13 +2,13 @@ package edu.mum.cs544.ecommerce.dbservice.repository;
 
 
 import edu.mum.cs544.ecommerce.dbservice.model.Product;
-import edu.mum.cs544.ecommerce.dbservice.model.Result;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.xml.transform.Result;
 import java.util.List;
 
 public interface ProductsServiceRepo {

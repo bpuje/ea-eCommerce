@@ -1,42 +1,42 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: customer-service
+  name: credit-service
   labels:
-    app: customer-service
+    app: credit-service
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: customer-service
+        app: credit-service
     spec:
       containers:
-        - name: customer-service
-          image: puje2docker/customer-service:latest
+        - name: credit-service
+          image: puje2docker/credit-service:latest
           ports:
             - containerPort: 8080
               env:                  # Environment variables supplied to the Pod
                 - name: SPRING_DATASOURCE_USERNAME # Name of the environment variable
                   valueFrom:          # Get the value of environment variable from kubernetes secrets
                     secretKeyRef:
-                      name: mysql-customer-service-secrets
+                      name: mysql-credit-service-secrets
                       key: MYSQL_USER
                 - name: SPRING_DATASOURCE_PASSWORD
                   valueFrom:
                     secretKeyRef:
-                      name: mysql-customer-service-secrets
+                      name: mysql-credit-service-secrets
                       key: MYSQL_PASSWORD
                 - name: SPRING_DATASOURCE_URL
                   valueFrom:
                     secretKeyRef:
-                      name: mysql-customer-service-secrets
+                      name: mysql-credit-service-secrets
                       key: MYSQL_URL
                 - name: SERVER_PORT
                   valueFrom:
                     secretKeyRef:
-                      name: mysql-customer-service-secrets
+                      name: mysql-credit-service-secrets
                       key: SERVER_PORT
   selector:
     matchLabels:
-      app: customer-service
+      app: credit-service

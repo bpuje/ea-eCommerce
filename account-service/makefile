@@ -1,5 +1,5 @@
 DOCKERHUBREPO=puje
-IMAGE=${DOCKERHUBREPO}/db-service
+IMAGE=${DOCKERHUBREPO}/account_service
 
 # ===== Maven =====
 maven-rebuild:
