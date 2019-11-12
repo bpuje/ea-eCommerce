@@ -18,20 +18,6 @@ We chose Google K8s Engine because
 # Microservice Interactions: 
 
 # Deployment 
-# Design decisions:
-First of all, the project was developed with spring-boot 
-and deployed with Google Kubernetes Engine.
-
-We chose Google K8s Engine because 
- - Google Kubernetes Engine (GKE) is a managed, 
- production-ready environment for deploying containerized applications.
-    Deploying on Google Cloud manages Spaces for us. Minikube is heavy on local systems.
-    
- - Kubernetes Engine enables rapid application development and iteration by making it easy to deploy,
-  update, and manage your applications and services.
-  
- - Go from a single machine to thousands: Kubernetes Engine autoscaling 
-  allows you to handle increased user demand for your services'
        
 The deployment has several steps:
 
